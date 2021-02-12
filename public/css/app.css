@@ -16152,3 +16152,93 @@ readers do not read off random characters that represent icons */
   background: #fd5068;
   color: #fff;
 }
+
+body {
+  overflow: visible;
+}
+
+.notice,
+.alert {
+  display: none;
+}
+
+.signupPage .header {
+  padding: 20px;
+  text-align: center;
+  background: #fd5068;
+  color: #fff;
+}
+.signupPage .userProfileImg {
+  position: relative;
+  margin: 0 auto 10px auto;
+  width: 100px;
+  height: 100px;
+  background: #f85a6f;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.signupPage .userProfileImg:hover .userProfileImg_description {
+  opacity: 1;
+}
+.signupPage .userProfileImg_description {
+  transition: opacity 0.5s;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(5, 5, 5, 0.5);
+  color: #fff;
+}
+.signupPage .userProfileImg .fa-camera {
+  color: #fff;
+}
+.signupPage .userProfileImg > input {
+  display: none;
+}
+.signupPage .userImgPreview {
+  margin: 0 auto;
+  display: none;
+  text-align: center;
+}
+.signupPage .userImgPreview.is-active {
+  display: block;
+}
+.signupPage .userImgPreview_content {
+  max-width: 100px;
+  margin: 10px;
+  padding: 10px;
+  border: solid thin lightgray;
+  border-radius: 5px;
+}
+.signupPage .userImgPreview_text {
+  font-size: 11px;
+}
+.signupPage .submitBtn {
+  background: #fd5068;
+  color: #fff;
+  width: 200px;
+  padding: 10px;
+  border-radius: 90px;
+  transition: opacity 0.5s;
+}
+.signupPage .submitBtn:hover {
+  opacity: 0.6;
+}
+.signupPage .errorMessage {
+  color: #fd5068;
+}
+
+.linkToLogin {
+  margin: 15px 0 15px;
+  text-align: center;
+}
+.linkToLogin > a {
+  color: #fd5068;
+}
