@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::group(['prefix' => 'users', 'middleware' => 'auth'], function () {
     Route::get('show/{id}', 'App\Http\Controllers\UserController@show')->name('users.show');
+    Route::get('edit/{id}', 'App\Http\Controllers\UserController@edit')->name('users.edit');
+    Route::post('update/{id}', 'App\Http\Controllers\UserController@update')->name('users.update');
 });
 
 Auth::routes();
