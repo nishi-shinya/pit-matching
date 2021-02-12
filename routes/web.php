@@ -17,9 +17,9 @@ Route::get('/', function () {
     return view('top');
 });
 
-Auth::routes();
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::group(['prefix' => 'users', 'middleware' => 'auth'], function () {
+    Route::get('show/{id}', 'App\Http\Controllers\UserController@show')->name('users.show');
+});
 
 Auth::routes();
 

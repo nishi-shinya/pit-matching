@@ -71,9 +71,7 @@ class RegisterController extends Controller
     {
         $imageFile = $data['img_name'];
         
-        $list = FileUploadServices::fileUpload($imageFile);
-        
-        list($extension, $fileNameToStore, $fileData) = $list;
+        [$extension, $fileNameToStore, $fileData] = FileUploadServices::fileUpload($imageFile);
         
         $data_url = CheckExtensionServices::checkExtension($fileData, $extension);
         
